@@ -24,7 +24,7 @@ export function Home() {
   );
 
   const marqueeNames = useMemo(
-    () => allSweets.map((s) => s.name),
+    () => allSweets.filter((s) => s.featured).map((s) => s.name),
     [allSweets]
   );
 
@@ -44,15 +44,15 @@ export function Home() {
           <div className="hero-copy">
             <BrandLogo className="brand-logo-hero" />
             <p className="eyebrow">
-              <span className="bn">বাঙালি মিষ্টি</span> · Bengali Sweets
+              <span className="bn">বাঙালি মিষ্টি</span> · Since 1844
             </p>
             <h1>
               স্বাগতম — Welcome to{" "}
               <span>Girish Chandra Dey &amp; Nakur Chandra Nandy</span>
             </h1>
             <p className="lead">
-              Handmade Bengali sweets in the spirit of Nandalal Bose — browse
-              the mishti and place your order.
+              Five generations of handcrafted Bengali mishti, made fresh
+              every morning from recipes passed down since 1844.
             </p>
             <div className="hero-actions">
               <Link to="/shop" className="btn btn-primary">
@@ -77,17 +77,21 @@ export function Home() {
       <section className="container section">
         <FolkDivider color="var(--terracotta)" />
         <div className="section-head">
-          <h2>Featured sweets</h2>
-          <Link to="/shop">See all →</Link>
+          <h2>From Our Kitchen</h2>
         </div>
         {loading ? (
           <p className="muted">Loading sweets…</p>
         ) : (
-          <div className="sweet-grid">
-            {featured.map((s) => (
-              <SweetCard key={s.id} sweet={s} />
-            ))}
-          </div>
+          <>
+            <div className="sweet-grid">
+              {featured.map((s) => (
+                <SweetCard key={s.id} sweet={s} />
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: 28 }}>
+              <Link to="/shop" className="btn btn-ghost">See all sweets →</Link>
+            </div>
+          </>
         )}
       </section>
 
@@ -157,8 +161,8 @@ export function Home() {
       <section className="container section social-section">
         <FolkDivider color="var(--terracotta)" />
         <div className="section-head">
-          <h2>Connect With Us</h2>
-          <p className="muted">Follow our journey and stay updated</p>
+          <h2>Social Links</h2>
+          <p className="muted">Follow us for daily specials &amp; behind-the-scenes</p>
         </div>
         <div className="social-grid">
           {/* Facebook */}
@@ -176,6 +180,19 @@ export function Home() {
               <p className="social-card-detail">Latest: Jagannath Swami Nayana Patha Gami Bhavatu Me 🙏</p>
             </div>
             <span className="social-card-cta">Follow Page →</span>
+          </a>
+
+          {/* Instagram */}
+          <a href="https://www.instagram.com/girishnakur/" target="_blank" rel="noopener noreferrer" className="social-card">
+            <div className="social-card-icon social-card-icon--ig">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div className="social-card-body">
+              <h3>Instagram</h3>
+              <p className="social-card-handle">@girishnakur</p>
+              <p className="social-card-detail">Behind-the-scenes from our kitchen, daily specials, and the art of mishti-making</p>
+            </div>
+            <span className="social-card-cta">Follow →</span>
           </a>
 
           {/* X / Twitter */}
@@ -215,27 +232,9 @@ export function Home() {
             <span className="social-card-cta">Read Reviews →</span>
           </a>
 
-          {/* Zomato */}
-          <a href="https://www.zomato.com/kolkata/girish-chandra-dey-nakur-chandra-nandy-hatibagan" target="_blank" rel="noopener noreferrer" className="social-card">
-            <div className="social-card-icon social-card-icon--zm">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.996 0C5.372 0 0 5.372 0 11.996s5.372 11.996 11.996 11.996 11.996-5.372 11.996-11.996S18.62 0 11.996 0zm5.166 16.47c-.224.376-.7.504-1.076.28l-3.09-1.836c-.12-.072-.196-.204-.196-.348v-3.6c0-.276.224-.5.5-.5h1.476c.276 0 .5.224.5.5v2.34l2.184 1.3c.376.224.504.7.28 1.076l-.578-.606z"/></svg>
-            </div>
-            <div className="social-card-body">
-              <h3>Zomato</h3>
-              <p className="social-card-handle">Hatibagan, Kolkata</p>
-              <div className="social-card-rating">
-                <span className="social-card-badge">4.8</span>
-                <span className="social-card-stat-label">excellent</span>
-              </div>
-              <div className="social-card-stat">
-                <span className="social-card-stat-num">1,618</span>
-                <span className="social-card-stat-label">votes</span>
-              </div>
-            </div>
-            <span className="social-card-cta">View on Zomato →</span>
-          </a>
         </div>
       </section>
+
     </div>
   );
 }

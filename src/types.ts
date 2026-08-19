@@ -26,3 +26,20 @@ export const SWEET_SHAPES: SweetShape[] = [
   "gulabjamun",
   "jalebi",
 ];
+
+export interface Review {
+  id: string;
+  authorName: string;
+  authorInitials: string;
+  rating: number;
+  text: string;
+  /** ISO date string */
+  publishedAt: string;
+  profilePhotoUrl?: string;
+  /** Original Google Maps review URL (if available) */
+  googleMapsUrl?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type ReviewInput = Omit<Review, "id" | "createdAt" | "updatedAt">;

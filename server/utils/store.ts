@@ -12,7 +12,7 @@ const SEED: Sweet[] = [
   {
     id: "chandrapuli",
     name: "Chandrapuli",
-    description: "A classic Bengali sandesh shaped like the crescent moon, made with fresh chhena and flavoured with cardamom.",
+    description: "Shaped like the crescent moon, this sandesh is made with fresh chhena and a whisper of cardamom — a quiet classic that has been a favourite at evening addas for decades.",
     price: 30,
     bestBeforeHours: 60,
     category: "Sandesh",
@@ -26,7 +26,7 @@ const SEED: Sweet[] = [
   {
     id: "monopuli",
     name: "Monopuli",
-    description: "A beloved sandesh variety with a soft, crumbly centre and a golden exterior.",
+    description: "A soft, crumbly centre wrapped in a golden exterior — the kind of sandesh that disappears from the plate before you notice.",
     price: 35,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -40,7 +40,7 @@ const SEED: Sweet[] = [
   {
     id: "golapi-pera",
     name: "Golapi Pera",
-    description: "Rose-tinted milk pera with a delicate floral aroma, a sweetshop staple.",
+    description: "Rose-tinted and delicately floral, this milk pera has the gentle sweetness of a Kolkata spring morning.",
     price: 20,
     bestBeforeHours: 24,
     category: "Sandesh",
@@ -54,7 +54,7 @@ const SEED: Sweet[] = [
   {
     id: "jalbhara",
     name: "Jalbhara",
-    description: "A juicy sandesh stuffed with syrup-soaked chhena, named for its water-filled appearance.",
+    description: "A shell of chhena filled with syrup that bursts in your mouth — the name means 'water-filled', and one bite tells you why it's our most requested sweet.",
     price: 30,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -68,7 +68,7 @@ const SEED: Sweet[] = [
   {
     id: "kanthal",
     name: "Kanthal",
-    description: "Jackfruit-flavoured sandesh with a tropical sweetness and bright golden hue.",
+    description: "Jackfruit-flavoured sandesh with the warm sweetness of a Bengal summer — golden, fragrant, and unmistakably seasonal.",
     price: 25,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -82,7 +82,7 @@ const SEED: Sweet[] = [
   {
     id: "guti-monohara",
     name: "Guti Monohara",
-    description: "Tiny, jewel-like sandesh balls that melt on the tongue — a heart-stealer in every bite.",
+    description: "Tiny, jewel-like balls that melt on the tongue — monohara means 'heart-stealer', and these little bites live up to the name.",
     price: 25,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -96,7 +96,7 @@ const SEED: Sweet[] = [
   {
     id: "sorpuria",
     name: "Sorpuria",
-    description: "A light, airy sweet made from strained chhena with a hint of saffron.",
+    description: "Light, airy, and dusted with a hint of saffron — a sweet so delicate it feels like it might float off your plate.",
     price: 30,
     bestBeforeHours: 12,
     category: "Sandesh",
@@ -110,7 +110,7 @@ const SEED: Sweet[] = [
   {
     id: "dilkhush",
     name: "Dilkhush",
-    description: "A heart-pleasing sandesh stuffed with a rich, nutty filling.",
+    description: "A heart-pleasing sandesh with a rich, nutty centre — dilkhush literally means 'one who makes the heart happy'.",
     price: 25,
     bestBeforeHours: 12,
     category: "Sandesh",
@@ -124,7 +124,7 @@ const SEED: Sweet[] = [
   {
     id: "parijat",
     name: "Parijat",
-    description: "Named after the celestial flower, a delicately fragrant sandesh with a soft, floral note.",
+    description: "Named after the night-flowering parijat blossom, this sandesh carries a subtle floral fragrance that lingers long after the last bite.",
     price: 25,
     bestBeforeHours: 12,
     category: "Sandesh",
@@ -138,7 +138,7 @@ const SEED: Sweet[] = [
   {
     id: "sachin",
     name: "Sachin",
-    description: "A sporty, modern sandesh creation with a mildly sweet and creamy profile.",
+    description: "A modern sandesh with a mildly sweet, creamy profile — smooth and unhurried, like a lazy Sunday afternoon.",
     price: 25,
     bestBeforeHours: 24,
     category: "Sandesh",
@@ -152,7 +152,7 @@ const SEED: Sweet[] = [
   {
     id: "sourav",
     name: "Sourav",
-    description: "A smooth, hand-pressed sandesh with a subtle caramel undertone.",
+    description: "Hand-pressed with a subtle caramel undertone — simple, smooth, and quietly satisfying.",
     price: 20,
     bestBeforeHours: 12,
     category: "Sandesh",
@@ -166,7 +166,7 @@ const SEED: Sweet[] = [
   {
     id: "utsav",
     name: "Utsav",
-    description: "A festive sandesh made for celebrations, decorated with silver leaf and pistachios.",
+    description: "Decorated with silver leaf and crushed pistachios, utsav means 'celebration' — and this sandesh was made for exactly that.",
     price: 25,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -180,7 +180,7 @@ const SEED: Sweet[] = [
   {
     id: "nutty-sandesh",
     name: "Nutty Sandesh",
-    description: "Crunchy roasted nuts folded into creamy chhena — a textural delight.",
+    description: "Roasted nuts folded into creamy chhena for a sweet that crunches and melts at the same time.",
     price: 20,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -194,7 +194,7 @@ const SEED: Sweet[] = [
   {
     id: "sugar-free",
     name: "Sugar Free",
-    description: "A guilt-free sandesh sweetened with alternative sweeteners — same great taste, no refined sugar.",
+    description: "The same handcrafted taste, sweetened without refined sugar — for those who want the tradition without the guilt.",
     price: 20,
     bestBeforeHours: 12,
     category: "Sandesh",
@@ -208,7 +208,7 @@ const SEED: Sweet[] = [
   {
     id: "babu",
     name: "Babu",
-    description: "A nostalgic Kolkata sweetshop classic with a dense, fudgy bite.",
+    description: "A Kolkata sweetshop classic — dense, fudgy, and deeply satisfying. The kind of sandesh elders reach for first.",
     price: 25,
     bestBeforeHours: 48,
     category: "Sandesh",
@@ -224,7 +224,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-barfi",
     name: "Gurer Barfi",
-    description: "Rich jaggery barfi with a deep, earthy sweetness and a fudge-like texture.",
+    description: "Rich jaggery barfi with the deep, earthy sweetness of date palm gur — dense and fudgy, best enjoyed slow.",
     price: 30,
     bestBeforeHours: 60,
     category: "Gurer Mithai",
@@ -238,7 +238,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-chandrapuli",
     name: "Gurer Chandrapuli",
-    description: "Crescent-shaped sandesh made with nolen gur, carrying the warmth of date palm jaggery.",
+    description: "The crescent moon sandesh, reimagined with nolen gur — carrying the smoky warmth of date palm jaggery in every bite.",
     price: 30,
     bestBeforeHours: 60,
     category: "Gurer Mithai",
@@ -252,7 +252,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-jalbhara",
     name: "Gurer Jalbhara",
-    description: "Juicy syrup-stuffed sandesh infused with the smoky sweetness of jaggery.",
+    description: "Syrup-stuffed sandesh infused with nolen gur — the burst of jaggery-sweet liquid is a winter ritual in Bengal.",
     price: 40,
     bestBeforeHours: 60,
     category: "Gurer Mithai",
@@ -266,7 +266,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-kanchagollab",
     name: "Gurer Kanchagollab",
-    description: "A ruby-red sandesh with a jaggery core — beautiful and bursting with flavour.",
+    description: "A ruby-red sandesh with a jaggery core — beautiful to look at and even better to eat.",
     price: 25,
     bestBeforeHours: 24,
     category: "Gurer Mithai",
@@ -280,7 +280,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-karapak-jalbhara",
     name: "Gurer Karapak Jalbhara",
-    description: "Caramelised jaggery jalbhara with a crackling outer shell and molten centre.",
+    description: "A caramelised jaggery shell that crackles when you bite through, giving way to a molten centre — our most indulgent winter sweet.",
     price: 40,
     bestBeforeHours: 100,
     category: "Gurer Mithai",
@@ -294,7 +294,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-karapak-talsash",
     name: "Gurer Karapak Talsash",
-    description: "A premium caramelised jaggery sweet with a crispy shell and rich, layered filling.",
+    description: "A caramelised jaggery shell with layered, fudge-like filling — Nakur's signature crunch that customers travel across the city for.",
     price: 40,
     bestBeforeHours: 100,
     category: "Gurer Mithai",
@@ -308,7 +308,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-monohara",
     name: "Gurer Monohara",
-    description: "Jaggery-infused heart-stealer with a smooth, melt-in-your-mouth texture.",
+    description: "Jaggery-infused and impossibly smooth — the heart-stealer that tastes like a Bengali winter evening.",
     price: 25,
     bestBeforeHours: 24,
     category: "Gurer Mithai",
@@ -322,7 +322,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-monopuli",
     name: "Gurer Monopuli",
-    description: "The classic Monopuli reimagined with date palm jaggery for an autumnal twist.",
+    description: "The classic Monopuli, reimagined with date palm jaggery — an autumnal twist on a year-round favourite.",
     price: 20,
     bestBeforeHours: 60,
     category: "Gurer Mithai",
@@ -336,7 +336,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-mousumi",
     name: "Gurer Mousumi",
-    description: "A seasonal jaggery sandesh with the fragrance of nolen gur and cardamom.",
+    description: "A seasonal sandesh fragrant with nolen gur and cardamom — the kind of sweet that makes you close your eyes while eating.",
     price: 30,
     bestBeforeHours: 60,
     category: "Gurer Mithai",
@@ -350,7 +350,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-ratabi",
     name: "Gurer Ratabi",
-    description: "A firm, long-lasting jaggery sandesh with a deep caramel flavour.",
+    description: "Firm, long-lasting, and deep in caramel flavour — ratabi is the sweet you pack for a long journey.",
     price: 20,
     bestBeforeHours: 100,
     category: "Gurer Mithai",
@@ -364,7 +364,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-mohini",
     name: "Gurer Mohini",
-    description: "A mesmerising jaggery sandesh that enchants with its rich, golden sweetness.",
+    description: "Mesmerising in its golden sweetness — mohini means 'enchantress', and this jaggery sandesh earns the name.",
     price: 30,
     bestBeforeHours: 12,
     category: "Gurer Mithai",
@@ -380,7 +380,7 @@ const SEED: Sweet[] = [
   {
     id: "jafraan-karapak-talsash",
     name: "Jafraan Karapak Talsash",
-    description: "Saffron-infused caramelised sandesh with a crisp shell and luxurious filling.",
+    description: "Saffron-infused caramelised sandesh with a crisp shell and a luxurious, layered filling — our most refined talsash.",
     price: 30,
     bestBeforeHours: 100,
     category: "Karapak & Talsash",
@@ -394,7 +394,7 @@ const SEED: Sweet[] = [
   {
     id: "karapak-talsash",
     name: "Karapak Talsash",
-    description: "A caramelised shell sandesh with a layered, fudge-like centre — Nakur's signature crunch.",
+    description: "Caramelised shell, layered centre, signature crunch — this is the sweet that put Nakur on the map.",
     price: 30,
     bestBeforeHours: 100,
     category: "Karapak & Talsash",
@@ -408,7 +408,7 @@ const SEED: Sweet[] = [
   {
     id: "korapak-ratabi",
     name: "Korapak Ratabi",
-    description: "A long-lasting sandesh with a hard, caramelised exterior and a chewy core.",
+    description: "A hard, caramelised exterior with a chewy, flavourful core — built to last and built to satisfy.",
     price: 20,
     bestBeforeHours: 100,
     category: "Karapak & Talsash",
@@ -424,7 +424,7 @@ const SEED: Sweet[] = [
   {
     id: "malai-roll",
     name: "Malai Roll",
-    description: "Delicate sheets of chhena rolled around a creamy malai filling — a melt-away classic.",
+    description: "Delicate sheets of chhena rolled around a creamy malai filling — so soft it practically dissolves on your tongue.",
     price: 30,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -438,7 +438,7 @@ const SEED: Sweet[] = [
   {
     id: "butter-scotch-malai-roll",
     name: "Butter Scotch Malai Roll",
-    description: "A buttery, toffee-flavoured twist on the beloved malai roll.",
+    description: "A buttery, toffee-flavoured twist on the beloved malai roll — rich without being heavy.",
     price: 30,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -452,7 +452,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-malai-roll",
     name: "Chocolate Malai Roll",
-    description: "Rich cocoa-dusted chhena roll with a luscious cream centre.",
+    description: "Cocoa-dusted chhena wrapped around a luscious cream centre — where Bengal meets Belgium.",
     price: 30,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -466,7 +466,7 @@ const SEED: Sweet[] = [
   {
     id: "gurer-malai-roll",
     name: "Gurer Malai Roll",
-    description: "Jaggery-kissed malai roll with the earthy warmth of nolen gur.",
+    description: "Jaggery-kissed malai roll with the earthy warmth of nolen gur — winter comfort, rolled up.",
     price: 30,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -480,7 +480,7 @@ const SEED: Sweet[] = [
   {
     id: "mango-malai-roll",
     name: "Mango Malai Roll",
-    description: "Alphonso mango pulp swirled into a creamy malai roll — summer in every bite.",
+    description: "Alphonso mango pulp swirled into creamy malai — summer in every bite, no matter the season.",
     price: 25,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -494,7 +494,7 @@ const SEED: Sweet[] = [
   {
     id: "malai-singara",
     name: "Malai Singara",
-    description: "A premium, hand-crafted singara stuffed with rich malai and dry fruits.",
+    description: "A crispy-edged singara stuffed with rich malai and dry fruits — part sweet, part savoury, entirely irresistible.",
     price: 65,
     bestBeforeHours: 12,
     category: "Rolls",
@@ -508,7 +508,7 @@ const SEED: Sweet[] = [
   {
     id: "singara-sandesh-dry-fruit",
     name: "Singara Sandesh (Dry Fruit)",
-    description: "A crispy-edged singara sandesh packed with assorted dry fruits and nuts.",
+    description: "A crispy singara sandesh packed with assorted dry fruits and nuts — for when one kind of indulgence isn't enough.",
     price: 45,
     bestBeforeHours: 72,
     category: "Rolls",
@@ -524,7 +524,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-black-forest",
     name: "Chocolate Black Forest",
-    description: "Layers of cocoa sponge and cream — a Bengali twist on the German classic.",
+    description: "Layers of cocoa sponge and cream — a Bengali reinterpretation of the German classic, made fresh with chhena.",
     price: 15,
     bestBeforeHours: 60,
     category: "Chocolate",
@@ -538,7 +538,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-choco-fillings",
     name: "Chocolate Choco Fillings",
-    description: "A chocolate shell hiding a molten chocolate centre — pure indulgence.",
+    description: "A chocolate shell hiding a molten centre — break it open and let the inside do the talking.",
     price: 30,
     bestBeforeHours: 60,
     category: "Chocolate",
@@ -552,7 +552,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-chips",
     name: "Chocolate Chips",
-    description: "Mini chocolate-studded sandesh bites, crunchy and addictive.",
+    description: "Mini chocolate-studded sandesh bites — crunchy, addictive, and gone before you know it.",
     price: 20,
     bestBeforeHours: 60,
     category: "Chocolate",
@@ -566,7 +566,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-dark",
     name: "Chocolate Dark",
-    description: "Intensely dark chocolate sandesh for the true cocoa purist.",
+    description: "Intensely dark, deeply satisfying — for the cocoa purist who takes their sweetness seriously.",
     price: 30,
     bestBeforeHours: 24,
     category: "Chocolate",
@@ -580,7 +580,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-monopuli",
     name: "Chocolate Monopuli",
-    description: "The classic Monopuli reimagined with a rich chocolate coating.",
+    description: "The Monopuli you love, wrapped in a rich chocolate coating — a fusion that just works.",
     price: 35,
     bestBeforeHours: 48,
     category: "Chocolate",
@@ -594,7 +594,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-rice-ball",
     name: "Chocolate Rice Ball",
-    description: "Crispy rice cereal coated in Belgian chocolate — a fun, crunchy treat.",
+    description: "Crispy rice cereal coated in Belgian chocolate — playful, crunchy, and impossible to stop at one.",
     price: 25,
     bestBeforeHours: 60,
     category: "Chocolate",
@@ -608,7 +608,7 @@ const SEED: Sweet[] = [
   {
     id: "chocolate-singara",
     name: "Chocolate Singara",
-    description: "A crispy, golden singara filled with dark chocolate ganache.",
+    description: "A crispy, golden singara filled with dark chocolate ganache — the crossover nobody expected but everyone loves.",
     price: 45,
     bestBeforeHours: 60,
     category: "Chocolate",
@@ -624,7 +624,7 @@ const SEED: Sweet[] = [
   {
     id: "black-current",
     name: "Black Current",
-    description: "Vibrant blackcurrant-infused sandesh with a tangy berry burst.",
+    description: "Vibrant blackcurrant-infused sandesh with a tangy berry burst — bold, bright, and unmistakably fruity.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -638,7 +638,7 @@ const SEED: Sweet[] = [
   {
     id: "butter-scotch",
     name: "Butter Scotch",
-    description: "Buttery, toffee-flavoured sandesh with a caramel sweetness.",
+    description: "Buttery, toffee-flavoured sandesh with a caramel sweetness — comfort food, Bengali style.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -652,7 +652,7 @@ const SEED: Sweet[] = [
   {
     id: "coffee",
     name: "Coffee",
-    description: "Rich espresso-infused sandesh with a smooth, aromatic finish.",
+    description: "Rich espresso-infused sandesh with a smooth, aromatic finish — for those who like their mishti with a kick.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -666,7 +666,7 @@ const SEED: Sweet[] = [
   {
     id: "kiwi",
     name: "Kiwi",
-    description: "Tangy kiwi-flavoured sandesh with a refreshing, fruity zing.",
+    description: "Tangy kiwi-flavoured sandesh with a refreshing, fruity zing — a palate cleanser disguised as a sweet.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -680,7 +680,7 @@ const SEED: Sweet[] = [
   {
     id: "lebu",
     name: "Lebu",
-    description: "Zesty lemon sandesh — a bright, citrusy palate cleanser.",
+    description: "Zesty lemon sandesh — bright, citrusy, and just the thing to wake up your tastebuds after a rich meal.",
     price: 20,
     bestBeforeHours: 12,
     category: "Flavoured Sandesh",
@@ -694,7 +694,7 @@ const SEED: Sweet[] = [
   {
     id: "mango",
     name: "Mango",
-    description: "Luscious Alphonso mango sandesh with a tropical, sun-ripened sweetness.",
+    description: "Luscious Alphonso mango sandesh with a tropical, sun-ripened sweetness that tastes like a Kolkata summer.",
     price: 30,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -708,7 +708,7 @@ const SEED: Sweet[] = [
   {
     id: "mango-amrapali",
     name: "Mango Amrapali",
-    description: "Premium Amrapali mango sandesh with an intense, velvety mango flavour.",
+    description: "Premium Amrapali mango sandesh with an intense, velvety flavour — the king of mangoes, the king of sandesh.",
     price: 30,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -722,7 +722,7 @@ const SEED: Sweet[] = [
   {
     id: "orange",
     name: "Orange",
-    description: "Sunshine-orange sandesh with a fresh, citrusy aroma.",
+    description: "Sunshine-orange sandesh with a fresh, citrusy aroma — light enough for a midday treat.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -736,7 +736,7 @@ const SEED: Sweet[] = [
   {
     id: "orange-lemon",
     name: "Orange Lemon",
-    description: "A citrus duo — orange and lemon sandesh blended for a tangy twist.",
+    description: "A citrus duo — orange and lemon blended into one sandesh for a tangy twist that keeps you coming back.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -750,7 +750,7 @@ const SEED: Sweet[] = [
   {
     id: "strawberry",
     name: "Strawberry",
-    description: "Sweet strawberry sandesh with a rosy pink hue and a berry-kissed flavour.",
+    description: "Sweet strawberry sandesh with a rosy pink hue — berry-kissed and impossible to resist.",
     price: 25,
     bestBeforeHours: 48,
     category: "Flavoured Sandesh",
@@ -766,7 +766,7 @@ const SEED: Sweet[] = [
   {
     id: "abar-khabo",
     name: "Abar Khabo (Saturday)",
-    description: "A special Saturday-only sandesh — 'eat again' in Bengali, and you will.",
+    description: "A Saturday-only special — 'abar khabo' means 'I'll eat again', and once you've tried it, you will.",
     price: 25,
     bestBeforeHours: 12,
     category: "Special",
@@ -780,7 +780,7 @@ const SEED: Sweet[] = [
   {
     id: "chop",
     name: "Chop (Sunday)",
-    description: "A Sunday special — a crispy, deep-fried sweet chop exclusive to weekends.",
+    description: "A Sunday-only crispy, deep-fried sweet chop — the weekend ritual that loyal customers plan their mornings around.",
     price: 30,
     bestBeforeHours: 24,
     category: "Special",
@@ -794,7 +794,7 @@ const SEED: Sweet[] = [
   {
     id: "mangolia-bati",
     name: "Mangolia (Bati)",
-    description: "A grand, bowl-shaped sandesh loaded with dry fruits and silver leaf — the centrepiece sweet.",
+    description: "A grand, bowl-shaped sandesh loaded with dry fruits and silver leaf — the centrepiece sweet for celebrations and gifting.",
     price: 60,
     bestBeforeHours: 48,
     category: "Special",
@@ -888,4 +888,118 @@ export async function deleteSweet(id: string): Promise<boolean> {
 export async function listCategories(): Promise<string[]> {
   const sweets = await readAll();
   return [...new Set(sweets.map((s) => s.category))].sort();
+}
+
+// ── Reviews ─────────────────────────────────────────────────────────
+
+import type { Review, ReviewInput } from "./types";
+
+const REVIEW_STORAGE_KEY = "reviews";
+
+const SEED_REVIEWS: Review[] = [
+  {
+    id: "rev-1",
+    authorName: "Priya Banerjee",
+    authorInitials: "PB",
+    rating: 5,
+    text: "The Jalbhara here is unlike anything else in Kolkata. The syrup bursts in your mouth and the chhena is always perfectly fresh. My family has been buying from Nakur for three generations — the quality has never dropped.",
+    publishedAt: "2026-07-14T10:30:00.000Z",
+    createdAt: "2026-08-01T00:00:00.000Z",
+    updatedAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    id: "rev-2",
+    authorName: "Rahul Sen",
+    authorInitials: "RS",
+    rating: 5,
+    text: "If you visit Kolkata and don't try the Karapak Talsash from Nakur, you've missed the best part. The caramelised shell crackles perfectly and the filling is rich without being heavy. Pure artistry.",
+    publishedAt: "2026-06-22T14:15:00.000Z",
+    createdAt: "2026-08-01T00:00:00.000Z",
+    updatedAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    id: "rev-3",
+    authorName: "Ananya Das",
+    authorInitials: "AD",
+    rating: 4,
+    text: "The Chandrapuli is delicate and beautiful — shaped like a crescent moon with cardamom that lingers on the palate. The shop itself feels like stepping back in time. Only reason for 4 stars is the wait during Durga Puja season!",
+    publishedAt: "2026-05-08T09:45:00.000Z",
+    createdAt: "2026-08-01T00:00:00.000Z",
+    updatedAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    id: "rev-4",
+    authorName: "Subhash Ghosh",
+    authorInitials: "SG",
+    rating: 5,
+    text: "The Gurer Barfi in winter is a religious experience. The date palm jaggery gives it an earthy depth that you simply cannot find elsewhere. Worth every rupee and worth the trip across the city.",
+    publishedAt: "2026-04-18T16:20:00.000Z",
+    createdAt: "2026-08-01T00:00:00.000Z",
+    updatedAt: "2026-08-01T00:00:00.000Z",
+  },
+];
+
+async function readReviews(): Promise<Review[]> {
+  const storage = useStorage("data");
+  const raw = await storage.getItem<Review[]>(REVIEW_STORAGE_KEY);
+  if (raw == null) {
+    await storage.setItem(REVIEW_STORAGE_KEY, SEED_REVIEWS);
+    return SEED_REVIEWS;
+  }
+  return Array.isArray(raw) ? raw : [];
+}
+
+async function writeReviews(reviews: Review[]): Promise<void> {
+  await useStorage("data").setItem(REVIEW_STORAGE_KEY, reviews);
+}
+
+export async function listReviews(): Promise<Review[]> {
+  return readReviews();
+}
+
+export async function getReview(id: string): Promise<Review | undefined> {
+  const reviews = await readReviews();
+  return reviews.find((r) => r.id === id);
+}
+
+export async function createReview(input: ReviewInput): Promise<Review> {
+  const reviews = await readReviews();
+  const now = new Date().toISOString();
+  const id = `rev-${Date.now()}`;
+  const review: Review = {
+    ...input,
+    id,
+    createdAt: now,
+    updatedAt: now,
+  };
+  reviews.push(review);
+  await writeReviews(reviews);
+  return review;
+}
+
+export async function updateReview(
+  id: string,
+  patch: Partial<ReviewInput>
+): Promise<Review | undefined> {
+  const reviews = await readReviews();
+  const idx = reviews.findIndex((r) => r.id === id);
+  if (idx === -1) return undefined;
+  const updated: Review = {
+    ...reviews[idx],
+    ...patch,
+    id: reviews[idx].id,
+    createdAt: reviews[idx].createdAt,
+    updatedAt: new Date().toISOString(),
+  };
+  reviews[idx] = updated;
+  await writeReviews(reviews);
+  return updated;
+}
+
+export async function deleteReview(id: string): Promise<boolean> {
+  const reviews = await readReviews();
+  const next = reviews.filter((r) => r.id !== id);
+  if (next.length === reviews.length) return false;
+  await writeReviews(next);
+  return true;
 }

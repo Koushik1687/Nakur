@@ -1,4 +1,4 @@
-import type { Sweet, SweetInput } from "../types";
+import type { Sweet, SweetInput, Review, ReviewInput } from "../types";
 
 const API_BASE =
   import.meta.env.VITE_API_BASE?.replace(/\/$/, "") || "";
@@ -120,6 +120,35 @@ export const api = {
 
   deleteSweet(id: string): Promise<void> {
     return request(`/api/sweets/${id}`, {
+      method: "DELETE",
+      headers: authHeader(),
+    });
+  },
+
+  // ── Reviews ───────────────────────────────────────────────────────
+
+  listReviews(): Promise<{ reviews: Review[] }> {
+    return request("/api/reviews");
+  },
+
+  createReview(input: ReviewInput): Promise<{ review: Review }> {
+    return request("/api/reviews", {
+      method: "POST",
+      headers: authHeader(),
+      body: JSON.stringify(input),
+    });
+  },
+
+  updateReview(id: string, patch: Partial<ReviewInput>): Promise<{ review: Review }> {
+    return request(`/api/reviews/${id}`, {
+      method: "PUT",
+      headers: authHeader(),
+      body: JSON.stringify(patch),
+    });
+  },
+
+  deleteReview(id: string): Promise<void> {
+    return request(`/api/reviews/${id}`, {
       method: "DELETE",
       headers: authHeader(),
     });

@@ -5,20 +5,20 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <h3 className="footer-bn">গিরিশ চন্দ্র দে ও নাকুর চন্দ্র নন্দী</h3>
-          <p className="footer-en">
-            Girish Chandra Dey &amp; Nakur Chandra Nandy
-          </p>
+          <img src="/Logo/logo.png" alt="Girish Chandra Dey & Nakur Chandra Nandy" className="footer-logo" />
           <p>
-            Handmade Bengali sweets since 1844 — sandesh, rosogolla, laddu and
-            more, prepared fresh every day.
+            Girish Chandra Dey started manufacturing SANDESH more than a
+            hundred years ago. Subsequently the late Shri Nakur Chandra Nandy
+            joined him as a partner. Since then the firm became well known as
+            Girish Chandra Dey &amp; Nakur Chandra Nandy. The firm specialised
+            in KARAPAK SANDESH (hard baked sandesh).
           </p>
         </div>
         <div>
           <h4>Visit</h4>
           <a href="#">নাকুর মিষ্টির দোকান</a>
           <a href="#">Kolkata · Bengal</a>
-          <a href="#">Open 9am – 9pm</a>
+          <a href="#">Open 7am – 10:30pm</a>
         </div>
         <div>
           <h4>Explore</h4>
@@ -28,21 +28,23 @@ export function Footer() {
           <Link to="/admin">Admin Login</Link>
         </div>
         <div>
-          <h4>Quality Assurance</h4>
-          <p className="footer-li">Handmade with pure ghee</p>
-          <p className="footer-li">Prepared fresh every day</p>
-          <p className="footer-li">Hygienic kitchen practices</p>
-          <p className="footer-li">Authentic recipes since 1844</p>
+          <h4>Our Promise</h4>
+          <p className="footer-li">Pure ghee, fresh chhena, no shortcuts</p>
+          <p className="footer-li">Made fresh each morning, never frozen</p>
+          <p className="footer-li">Ingredients processed in-house</p>
+          <p className="footer-li">Recipes passed down five generations</p>
         </div>
         <div>
           <h4>Contact</h4>
-          <a href="tel:+919000000000">+91 90000 00000</a>
-          <a href="mailto:hello@girishnakur.com">hello@girishnakur.com</a>
+          <a href="tel:+919432494423">+91-9432494423</a>
+          <a href="tel:+913322410048">+91-33-22410048</a>
+          <a href="mailto:girishnakur@gmail.com">girishnakur@gmail.com</a>
+          <a href="mailto:contact@girishnakur.com">contact@girishnakur.com</a>
           <a href="#">Kolkata, Bengal</a>
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>Sweets since 1844 · Kolkata, Bengal</span>
+        <span>Mishti since 1844 · 56 Ramdulal Sarkar St, Kolkata</span>
         <span>
           © {new Date().getFullYear()} Girish Chandra Dey &amp; Nakur Chandra
           Nandy

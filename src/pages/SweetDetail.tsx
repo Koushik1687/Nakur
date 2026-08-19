@@ -60,8 +60,8 @@ export function SweetDetail() {
             )}
           </div>
           <p className="muted small">
-            Made fresh daily. Visit us in Kolkata or call ahead for festive
-            orders.
+            Made fresh every morning at our Kolkata shop. Walk in to pick
+            yours up, or call ahead for festive and bulk orders.
           </p>
         </div>
       </div>

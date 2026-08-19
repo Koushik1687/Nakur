@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import type { Sweet } from "../types";
+import type { Sweet, Review } from "../types";
 import { api } from "../api/client";
 import { SweetFormModal } from "./SweetFormModal";
+import { ReviewFormModal } from "./ReviewFormModal";
 
+type TabKey = "sweets" | "reviews";
 type SortKey = "name" | "price-asc" | "price-desc" | "newest" | "category";
 
 const PAGE_SIZE = 12;
@@ -19,6 +21,14 @@ export function AdminDashboard({ onLogout }: Props) {
   const [editing, setEditing] = useState<Sweet | null>(null);
   const [adding, setAdding] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  // Tab state
+  const [activeTab, setActiveTab] = useState<TabKey>("sweets");
+
+  // Reviews state
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [editingReview, setEditingReview] = useState<Review | null>(null);
+  const [addingReview, setAddingReview] = useState(false);
 
   // Filters
   const [query, setQuery] = useState("");
@@ -53,6 +63,8 @@ export function AdminDashboard({ onLogout }: Props) {
       return;
     }
     load();
+    // Load reviews
+    api.listReviews().then(({ reviews }) => setReviews(reviews)).catch(() => {});
   }, [navigate, load]);
 
   // Categories derived from data
@@ -215,6 +227,27 @@ export function AdminDashboard({ onLogout }: Props) {
     navigate("/admin");
   }
 
+  // ── Review handlers ───────────────────────────────────────────────
+  async function handleDeleteReview(review: Review) {
+    if (!confirm(`Delete review by "${review.authorName}"?`)) return;
+    try {
+      await api.deleteReview(review.id);
+      setReviews((prev) => prev.filter((r) => r.id !== review.id));
+    } catch (err: any) {
+      setError(err.message || "Delete failed.");
+    }
+  }
+
+  function onReviewSaved(review: Review) {
+    setReviews((list) => {
+      const idx = list.findIndex((r) => r.id === review.id);
+      if (idx === -1) return [review, ...list];
+      const next = [...list];
+      next[idx] = review;
+      return next;
+    });
+  }
+
   function onSaved(sweet: Sweet) {
     setSweets((list) => {
       const idx = list.findIndex((s) => s.id === sweet.id);
@@ -232,13 +265,33 @@ export function AdminDashboard({ onLogout }: Props) {
         <div className="container admin-topbar-inner">
           <div className="admin-topbar-left">
             <h1 className="admin-title">Admin Panel</h1>
-            <span className="admin-subtitle">Manage your sweets</span>
+            <div className="admin-tabs">
+              <button
+                className={`admin-tab${activeTab === "sweets" ? " active" : ""}`}
+                onClick={() => setActiveTab("sweets")}
+              >
+                🍬 Sweets
+              </button>
+              <button
+                className={`admin-tab${activeTab === "reviews" ? " active" : ""}`}
+                onClick={() => setActiveTab("reviews")}
+              >
+                ⭐ Reviews
+              </button>
+            </div>
           </div>
           <div className="admin-topbar-actions">
-            <button className="btn btn-primary" onClick={() => setAdding(true)}>
-              <span className="admin-btn-icon">+</span>
-              Add Sweet
-            </button>
+            {activeTab === "sweets" ? (
+              <button className="btn btn-primary" onClick={() => setAdding(true)}>
+                <span className="admin-btn-icon">+</span>
+                Add Sweet
+              </button>
+            ) : (
+              <button className="btn btn-primary" onClick={() => setAddingReview(true)}>
+                <span className="admin-btn-icon">+</span>
+                Add Review
+              </button>
+            )}
             <button className="btn btn-ghost" onClick={handleLogout}>
               Logout
             </button>
@@ -254,7 +307,8 @@ export function AdminDashboard({ onLogout }: Props) {
           </div>
         )}
 
-        {/* Stats cards */}
+        {/* Stats cards - Sweets tab */}
+        {activeTab === "sweets" && (
         <div className="admin-stats">
           <div className="admin-stat-card">
             <div className="admin-stat-icon" style={{ background: "rgba(177,67,36,0.1)", color: "var(--terracotta)" }}>🍬</div>
@@ -299,6 +353,38 @@ export function AdminDashboard({ onLogout }: Props) {
             </div>
           </div>
         </div>
+        )}
+
+        {/* Stats cards - Reviews tab */}
+        {activeTab === "reviews" && (
+        <div className="admin-stats">
+          <div className="admin-stat-card">
+            <div className="admin-stat-icon" style={{ background: "rgba(244,180,0,0.12)", color: "#f4b400" }}>⭐</div>
+            <div className="admin-stat-body">
+              <span className="admin-stat-num">{reviews.length}</span>
+              <span className="admin-stat-label">Total Reviews</span>
+            </div>
+          </div>
+          <div className="admin-stat-card">
+            <div className="admin-stat-icon" style={{ background: "rgba(78,122,63,0.12)", color: "var(--ok)" }}>★</div>
+            <div className="admin-stat-body">
+              <span className="admin-stat-num">
+                {reviews.length > 0
+                  ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1)
+                  : "—"}
+              </span>
+              <span className="admin-stat-label">Avg Rating</span>
+            </div>
+          </div>
+          <div className="admin-stat-card">
+            <div className="admin-stat-icon" style={{ background: "rgba(177,67,36,0.1)", color: "var(--terracotta)" }}>5★</div>
+            <div className="admin-stat-body">
+              <span className="admin-stat-num">{reviews.filter((r) => r.rating === 5).length}</span>
+              <span className="admin-stat-label">5-Star Reviews</span>
+            </div>
+          </div>
+        </div>
+        )}
 
         {/* Toolbar */}
         <div className="admin-toolbar">
@@ -612,6 +698,85 @@ export function AdminDashboard({ onLogout }: Props) {
         )}
       </div>
 
+      {/* Reviews Tab Content */}
+      {activeTab === "reviews" && (
+      <div className="admin-content">
+        {reviews.length === 0 ? (
+          <div className="admin-empty">
+            <span className="admin-empty-icon">⭐</span>
+            <h3>No reviews yet</h3>
+            <p>Add your first review to get started.</p>
+            <button className="btn btn-primary" onClick={() => setAddingReview(true)}>
+              + Add Review
+            </button>
+          </div>
+        ) : (
+          <div className="admin-table-wrap">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Reviewer</th>
+                  <th>Rating</th>
+                  <th className="admin-th-hide-sm">Date</th>
+                  <th>Review</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {reviews.map((r) => (
+                  <tr key={r.id}>
+                    <td>
+                      <div className="admin-name-cell">
+                        <div className="review-avatar" style={{ width: 32, height: 32, fontSize: 12 }}>
+                          <span>{r.authorInitials}</span>
+                        </div>
+                        <span className="admin-name">{r.authorName}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span className="review-stars" style={{ fontSize: 14 }}>
+                        {[1, 2, 3, 4, 5].map((i) => (
+                          <span key={i} className={`review-star${i <= r.rating ? " filled" : ""}`}>★</span>
+                        ))}
+                      </span>
+                    </td>
+                    <td className="admin-th-hide-sm">
+                      <span className="admin-bbh">
+                        {new Date(r.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+                      </span>
+                    </td>
+                    <td>
+                      <span className="admin-name" style={{ maxWidth: 300, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                        {r.text}
+                      </span>
+                    </td>
+                    <td>
+                      <div className="admin-row-actions">
+                        <button
+                          className="admin-action-btn edit"
+                          onClick={() => setEditingReview(r)}
+                          title="Edit"
+                        >
+                          ✎
+                        </button>
+                        <button
+                          className="admin-action-btn delete"
+                          onClick={() => handleDeleteReview(r)}
+                          title="Delete"
+                        >
+                          🗑
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+      )}
+
       {/* Modals */}
       {adding && (
         <SweetFormModal
@@ -632,6 +797,26 @@ export function AdminDashboard({ onLogout }: Props) {
           }}
         />
       )}
+      {addingReview && (
+        <ReviewFormModal
+          onClose={() => setAddingReview(false)}
+          onSaved={(r) => {
+            onReviewSaved(r);
+            setAddingReview(false);
+          }}
+        />
+      )}
+      {editingReview && (
+        <ReviewFormModal
+          initial={editingReview}
+          onClose={() => setEditingReview(null)}
+          onSaved={(r) => {
+            onReviewSaved(r);
+            setEditingReview(null);
+          }}
+        />
+      )}
+
     </div>
   );
 }

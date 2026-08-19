@@ -33,10 +33,11 @@ export function Contact() {
           <span className="contact-hero-eyebrow">
             <span className="bn">যোগাযোগ</span> · Get in Touch
           </span>
-          <h1>We'd Love to Hear <span>From You</span></h1>
+          <h1>Let's Talk <span>Mishti</span></h1>
           <p className="contact-hero-sub">
-            Whether you have a question, want to place a festive order, or just
-            want to say hello — we're here for you.
+            Whether you're planning a festive celebration, craving your
+            favourite sandesh, or simply want to visit — we're always happy
+            to hear from you.
           </p>
         </div>
       </section>
@@ -67,18 +68,16 @@ export function Contact() {
             </div>
             <h3>Opening Hours</h3>
             <div className="contact-hours">
-              <div className="contact-hours-row">
-                <span>Monday – Friday</span>
-                <span className="contact-hours-time">9:00 AM – 9:00 PM</span>
+              <div className="contact-hours-status">
+                <span className="contact-hours-dot" />
+                Open Now
               </div>
+              <div className="contact-hours-divider" />
               <div className="contact-hours-row">
-                <span>Saturday</span>
-                <span className="contact-hours-time">9:00 AM – 9:30 PM</span>
+                <span>Mon – Sun</span>
+                <span className="contact-hours-time">7 am – 10:30 pm</span>
               </div>
-              <div className="contact-hours-row">
-                <span>Sunday</span>
-                <span className="contact-hours-time">10:00 AM – 8:00 PM</span>
-              </div>
+              <p className="contact-info-note">Open all days including holidays</p>
             </div>
           </div>
 
@@ -87,7 +86,8 @@ export function Contact() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <h3>Call Us</h3>
-            <a href="tel:+919000000000" className="contact-phone">+91 90000 00000</a>
+            <a href="tel:+919432494423" className="contact-phone">+91-9432494423</a>
+            <a href="tel:+913322410048" className="contact-phone">+91-33-22410048</a>
             <p className="contact-info-note">
               For bulk &amp; festive orders, call ahead to ensure availability.
             </p>
@@ -98,8 +98,11 @@ export function Contact() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ochre)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <h3>Email Us</h3>
-            <a href="mailto:hello@girishnakur.com" className="contact-email">
-              hello@girishnakur.com
+            <a href="mailto:girishnakur@gmail.com" className="contact-email">
+              girishnakur@gmail.com
+            </a>
+            <a href="mailto:contact@girishnakur.com" className="contact-email">
+              contact@girishnakur.com
             </a>
             <p className="contact-info-note">
               We typically respond within 24 hours.
@@ -114,9 +117,6 @@ export function Contact() {
           {/* Contact Form */}
           <div className="contact-form-card">
             <h2>Send Us a Message</h2>
-            <p className="muted">
-              Fill out the form below and we'll get back to you shortly.
-            </p>
 
             {submitted ? (
               <div className="contact-success">
@@ -284,48 +284,50 @@ export function Contact() {
           <details className="contact-faq-item">
             <summary>Do you offer delivery?</summary>
             <p>
-              Yes! We deliver across Kolkata. For orders within 5 km of our shop,
-              delivery is free. For distances beyond that, a nominal delivery
-              charge applies. Call us to place a delivery order.
+              Yes. We deliver across Kolkata. Orders within 5 km of our shop
+              are delivered free of charge. For farther distances a nominal fee
+              applies — just give us a call and we'll sort it out.
             </p>
           </details>
           <details className="contact-faq-item">
             <summary>Can I place bulk orders for weddings or festivals?</summary>
             <p>
-              Absolutely. We specialise in large festive and wedding orders.
-              We recommend placing your order at least 3–5 days in advance.
-              Contact us for customised packaging and pricing.
+              Of course — wedding and puja orders are a big part of what we do.
+              We recommend ordering 3–5 days in advance so everything is fresh
+              on the day. We also offer customised packaging for gifting.
             </p>
           </details>
           <details className="contact-faq-item">
             <summary>Do you ship sweets outside Kolkata?</summary>
             <p>
-              Currently, we offer delivery within Kolkata and nearby areas.
-              For special requests outside the city, please get in touch and
-              we'll do our best to accommodate.
+              At the moment we deliver within Kolkata and its nearby areas.
+              For special out-of-city requests, reach out to us — we'll try
+              our best to find a way.
             </p>
           </details>
           <details className="contact-faq-item">
             <summary>Are your sweets suitable for people with dietary restrictions?</summary>
             <p>
-              Our sweets are made with fresh chhena (cottage cheese), ghee, sugar,
-              and natural flavourings. We offer a sugar-free variety. For specific
-              allergies or dietary needs, please contact us directly.
+              Our sweets are made with fresh chhena, pure ghee, sugar, and
+              natural flavourings — nothing artificial. We also have a sugar-free
+              range. If you have a specific allergy or dietary concern, let us
+              know and we'll guide you.
             </p>
           </details>
           <details className="contact-faq-item">
             <summary>How fresh are the sweets?</summary>
             <p>
-              All our sweets are prepared fresh every day. Nothing remains on
-              the shelves overnight. We use raw ingredients processed in-house
-              to maintain the highest quality standards.
+              Everything is made fresh each morning. Nothing stays on the shelf
+              overnight. We buy our ingredients raw and process them in-house,
+              which is how we've kept our quality consistent for over 180 years.
             </p>
           </details>
           <details className="contact-faq-item">
             <summary>What payment methods do you accept?</summary>
             <p>
               We accept cash, UPI (Google Pay, PhonePe, Paytm), and all major
-              debit/credit cards. For bulk orders, we also accept bank transfers.
+              debit and credit cards. For large orders we can also arrange a
+              bank transfer.
             </p>
           </details>
         </div>
