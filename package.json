@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Girish Nakur — React + Vite frontend with a Nitro + h3 backend",
   "scripts": {
-    "dev": "concurrently -k -n web,api \"npm:dev:web\" \"npm:dev:api\"",
+    "dev": "concurrently -k -n web,api \"pnpm:dev:web\" \"pnpm:dev:api\"",
     "dev:web": "vite",
     "dev:api": "nitro dev --port 3001",
     "build": "npm run build:web && npm run build:api",
@@ -52,9 +52,8 @@
   },
   "devEngines": {
     "packageManager": {
-      "name": "nub",
-      "version": "^0.7.5",
-      "onFail": "ignore"
+      "name": "pnpm",
+      "version": "10.34.5"
     }
   }
 }
