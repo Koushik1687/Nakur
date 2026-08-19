@@ -58,8 +58,11 @@ config.routes = config.routes.filter(
 // Remove ALL "handle": "filesystem" entries — we'll add one back at the end.
 config.routes = config.routes.filter((r) => r.handle !== "filesystem");
 
-// Append: filesystem handler first, then SPA fallback.
+// Append: API catch-all → Nitro server, filesystem handler, then SPA fallback.
+// API routes MUST reach the __fallback server function before the filesystem
+// handler tries (and fails) to serve them as static files.
 config.routes.push(
+  { src: "/api/(.*)", dest: "/__fallback" },
   { handle: "filesystem" },
   { src: "/(.*)", dest: "/index.html" }
 );
