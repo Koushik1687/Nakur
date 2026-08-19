@@ -111,7 +111,7 @@ export function Header() {
           </NavLink>
           <NavLink
             to="/#our-story"
-            className={({ isActive }) => {
+            className={() => {
               // Only show active if the observer says so AND we're on the home page;
               // ignore NavLink's own isActive to avoid a false positive on "/".
               if (!isHome) return undefined;
