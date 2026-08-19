@@ -1,0 +1,4 @@
+name: nakur
+owner: dudec2175
+package: .
+kind: wasmer.io/App.v0
