@@ -45,9 +45,14 @@ if (!Array.isArray(config.routes)) {
   config.routes = [];
 }
 
-// Remove Nitro's catch-all that routes everything to /__fallback.
+// Remove Nitro's catch-all and root API route.
+// `/` must be served by the React SPA, not Nitro's API health endpoint.
 config.routes = config.routes.filter(
-  (r) => !(r.src === "/(.*)" && r.dest === "/__fallback")
+  (r) =>
+    !(
+      (r.src === "/(.*)" && r.dest === "/__fallback") ||
+      (r.src === "/" && r.dest === "/index")
+    )
 );
 
 // Remove ALL "handle": "filesystem" entries — we'll add one back at the end.
