@@ -2,6 +2,7 @@
   "name": "nakur",
   "private": true,
   "version": "0.0.0",
+  "packageManager": "pnpm@10.34.5",
   "type": "module",
   "description": "Girish Nakur — React + Vite frontend with a Nitro + h3 backend",
   "scripts": {
@@ -49,11 +50,5 @@
   },
   "overrides": {
     "string-width-cjs": "npm:string-width@4.2.3"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "10.34.5"
-    }
   }
 }
