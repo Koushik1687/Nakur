@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "npm run build:web && npm run build:api -- --preset vercel && mkdir -p .vercel/output/static && cp -r dist/* .vercel/output/static/ && node scripts/vercel-spa-fallback.mjs",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": ".vercel/output",
   "framework": null
 }

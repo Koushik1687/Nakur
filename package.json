@@ -11,7 +11,7 @@
     "build": "npm run build:web && npm run build:api",
     "build:web": "tsc -b && vite build",
     "build:api": "nitro build",
-    "build:vercel": "npm run build:web && npm run build:api -- --preset vercel && mkdir -p .vercel/output/static && cp -r dist/* .vercel/output/static/ && node scripts/vercel-spa-fallback.mjs",
+    "build:vercel": "npm run build:web && npm run build:api -- --preset vercel && node scripts/vercel-build.mjs",
     "build:netlify": "nitro build --preset netlify",
     "build:cloudflare": "nitro build --preset cloudflare-pages",
     "build:aws": "nitro build --preset aws-lambda",
